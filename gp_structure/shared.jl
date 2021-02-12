@@ -3,7 +3,7 @@ using Gen: get_child
 import LinearAlgebra
 import CSV
 import Random
-using DataFrames
+import DataFrames
 
 using Statistics: mean
 
@@ -15,7 +15,7 @@ using Statistics: mean
 #########################
 
 function get_airline_dataset()
-    df = CSV.read("$(@__DIR__)/airline.csv", header=["time", "price"], DataFrame)
+    df = CSV.read("$(@__DIR__)/airline.csv", header=["time", "price"], DataFrames.DataFrame)
     xs = Vector{Float64}(df.time)
     ys = Vector{Float64}(df.price)
     xs .-= minimum(xs) # set x minimum to 0.
