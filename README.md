@@ -4,7 +4,6 @@
 
 A repository containing Gen examples with a Travis CI build that tests that
 they run.
-
 In the future, this repo we may also include automated tests for the
 approximate correctness of the inferences in each example.
 
@@ -16,22 +15,14 @@ NOTE: These examples take substantially longer to run than Gen's unit tests.
 
 ## Examples
 
-### Variants of Bayesian polynomial regression
+Variants of Bayesian polynomial regression: `regression/`
 
-`regression/`
+Variants of Bayesian inference over the structure of Gaussian process covariance function: `gp_structure/`
 
-### Variants of Bayesian inference over the structure of Gaussian process covariance function
+Minimal example of [involutive MCMC](https://arxiv.org/abs/2007.09871): `involutive_mcmc/`
 
-`gp_structure/`
+Decoding a substitution cipher using a bigram model and parallel tempering MCMC: `decode/`
 
-### Minimal example of [involutive MCMC](https://arxiv.org/abs/2007.09871)
+Minimal example of maximum likelihood estimation: `mle/`
 
-`involutive_mcmc/`
-
-### Decoding a substitution cipher using a bigram model and parallel tempering MCMC
-
-`decode/`
-
-### Minimal example of maximum likelihood estimation
-
-`mle/`
+Reversible jump MCMC in change point model: `coal/`

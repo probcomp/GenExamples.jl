@@ -12,6 +12,7 @@ env:
   - GEN_EXAMPLE=involutive_mcmc
   - GEN_EXAMPLE=decode
   - GEN_EXAMPLE=mle
+  - GEN_EXAMPLE=coal
 
 # different versions of bayesian polynomial regression
 # Gaussian process structure inference
