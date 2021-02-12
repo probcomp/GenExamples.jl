@@ -1,5 +1,7 @@
 # GenExamples.jl
 
+[![Build Status](https://travis-ci.com/probcomp/GenExamples.jl.svg?token=bxXxGvmE2n2G9iCjKFwG&branch=main)](https://travis-ci.com/probcomp/GenExamples.jl)
+
 A repository containing Gen examples with a Travis CI build that tests that
 they run.
 
