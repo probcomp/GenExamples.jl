@@ -11,6 +11,7 @@ env:
   - GEN_EXAMPLE=gp_structure
   - GEN_EXAMPLE=involutive_mcmc
   - GEN_EXAMPLE=decode
+  - GEN_EXAMPLE=mle
 
 # different versions of bayesian polynomial regression
 # Gaussian process structure inference
