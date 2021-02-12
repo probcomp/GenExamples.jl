@@ -7,8 +7,8 @@ julia:
 
 # run these in parallel
 env:
+  - GEN_EXAMPLE=gp_structure GKS_ENCODING="utf8" GKSwstype="100"
   - GEN_EXAMPLE=regression
-  - GEN_EXAMPLE=gp_structure
   - GEN_EXAMPLE=involutive_mcmc
   - GEN_EXAMPLE=decode
   - GEN_EXAMPLE=mle
