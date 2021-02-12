@@ -7,6 +7,18 @@ julia:
 
 jobs:
   include:
+
+    # different versions of bayesian polynomial regression
     - stage: regression
       script:
         - julia --project=regression -e 'using Pkg; Pkg.update(); include("regression/run_all.jl")'
+
+    # Gaussian process structure inference
+    - stage: gp_structure
+      script:
+        - julia --project=gp_structure -e 'using Pkg; Pkg.update(); include("gp_structure/run_all.jl")'
+
+    # involutive MCMC minimal example
+    - stage: involutive_mcmc
+      script:
+        - julia --project=involutive_mcmc -e 'using Pkg; Pkg.update(); include("involutive_mcmc/run_all.jl")'
