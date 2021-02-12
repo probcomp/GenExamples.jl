@@ -5,20 +5,16 @@ language: julia
 julia:
   - 1.5
 
-jobs:
-  include:
+# run these in parallel
+env:
+  - GEN_EXAMPLE=regression
+  - GEN_EXAMPLE=gp_structure
+  - GEN_EXAMPLE=involutive_mcmc
+  - GEN_EXAMPLE=decode
 
-    # different versions of bayesian polynomial regression
-    - stage: regression
-      script:
-        - julia --project=regression -e 'using Pkg; Pkg.update(); include("regression/run_all.jl")'
+# different versions of bayesian polynomial regression
+# Gaussian process structure inference
+# involutive MCMC minimal example
+# decoding substitution cipher using bigram model
 
-    # Gaussian process structure inference
-    - stage: gp_structure
-      script:
-        - julia --project=gp_structure -e 'using Pkg; Pkg.update(); include("gp_structure/run_all.jl")'
-
-    # involutive MCMC minimal example
-    - stage: involutive_mcmc
-      script:
-        - julia --project=involutive_mcmc -e 'using Pkg; Pkg.update(); include("involutive_mcmc/run_all.jl")'
+script: JULIA_PROJECT=$GEN_EXAMPLE julia -e 'using Pkg; Pkg.update(); include("$(ENV["GEN_EXAMPLE"])/run_all.jl")'
