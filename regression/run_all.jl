@@ -1,0 +1,8 @@
+include("static_mala_hmc.jl")
+include("static_map_optimize.jl")
+include("static_mh.jl")
+include("static_mh_collapsed.jl")
+include("quickstart.jl")
+include("dynamic_map_optimize_gibbs.jl")
+include("dynamic_mh.jl")
+include("dynamic_resimulation_mh.jl")

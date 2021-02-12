@@ -1,0 +1,12 @@
+# See http://docs.travis-ci.com/user/languages/julia/ and https://juliadocs.github.io/Documenter.jl/stable/man/hosting/#Hosting-Documentation-1
+# See status of Travis builds at https://travis-ci.org/probcomp/Gen
+
+language: julia
+julia:
+  - 1.5
+
+jobs:
+  include:
+    - stage: regression
+      script:
+        - julia --project=regression -e 'using Pkg; Pkg.update(); include("regression/run_all.jl")'
