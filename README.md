@@ -15,14 +15,14 @@ NOTE: These examples take substantially longer to run than Gen's unit tests.
 
 ## Examples
 
-Variants of Bayesian polynomial regression: `regression/`
+- Variants of Bayesian polynomial regression: `regression/`
 
-Variants of Bayesian inference over the structure of Gaussian process covariance function: `gp_structure/`
+- Variants of Bayesian inference over the structure of Gaussian process covariance function: `gp_structure/`
 
-Minimal example of [involutive MCMC](https://arxiv.org/abs/2007.09871): `involutive_mcmc/`
+- Minimal example of [involutive MCMC](https://arxiv.org/abs/2007.09871): `involutive_mcmc/`
 
-Decoding a substitution cipher using a bigram model and parallel tempering MCMC: `decode/`
+- Decoding a substitution cipher using a bigram model and parallel tempering MCMC: `decode/`
 
-Minimal example of maximum likelihood estimation: `mle/`
+- Minimal example of maximum likelihood estimation: `mle/`
 
-Reversible jump MCMC in change point model: `coal/`
+- Reversible jump MCMC in change point model: `coal/`

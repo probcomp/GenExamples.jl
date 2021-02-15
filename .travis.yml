@@ -7,17 +7,11 @@ julia:
 
 # run these in parallel
 env:
-  #- GEN_EXAMPLE=gp_structure GKS_ENCODING="utf8" GKSwstype="100"
-  #- GEN_EXAMPLE=regression
-  #- GEN_EXAMPLE=involutive_mcmc
-  #- GEN_EXAMPLE=decode
-  #- GEN_EXAMPLE=mle
+  - GEN_EXAMPLE=gp_structure GKS_ENCODING="utf8" GKSwstype="100"
+  - GEN_EXAMPLE=regression
+  - GEN_EXAMPLE=involutive_mcmc
+  - GEN_EXAMPLE=decode
+  - GEN_EXAMPLE=mle
   - GEN_EXAMPLE=coal
 
-# different versions of bayesian polynomial regression
-# Gaussian process structure inference
-# involutive MCMC minimal example
-# decoding substitution cipher using bigram model
-
-#script: JULIA_PROJECT=$GEN_EXAMPLE julia -e 'using Pkg; Pkg.update(); include("$(ENV["GEN_EXAMPLE"])/run_all.jl")'
 script: "JULIA_PROJECT=${GEN_EXAMPLE} ./${GEN_EXAMPLE}/run.sh"
