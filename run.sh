@@ -2,4 +2,4 @@
 set -u
 set -e
 
-julia -e 'include("${GEN_EXAMPLE}/run_all.jl")'
+julia -e 'dir=ENV["GEN_EXAMPLE"]; include("$dir/run_all.jl")'
