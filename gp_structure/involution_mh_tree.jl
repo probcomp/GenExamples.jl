@@ -98,7 +98,7 @@ end
     (path, new_subtree_node)
 end
 
-@transform subtree_involution_tree (model_in, aux_in) to (model_out, aux_out) begin
+@transform subtree_involution_tree_transform (model_in, aux_in) to (model_out, aux_out) begin
 
     (path::Vector{Symbol}, new_subtree_node) = @read(aux_in[], :discrete)
 
@@ -111,10 +111,10 @@ end
     @copy(model_in[model_subtree_addr], aux_out[:subtree])
 end
 
-is_involution!(subtree_involution_tree)
+is_involution!(subtree_involution_tree_transform)
 
 replace_subtree_move(trace) = metropolis_hastings(
-    trace, subtree_proposal, (), subtree_involution_tree; check=true)[1]
+    trace, subtree_proposal, (), subtree_involution_tree_transform; check=true)[1]
 
 
 #####################

@@ -174,7 +174,7 @@ end
     (subtree_idx, depth, new_subtree_node_type)
 end
 
-function subtree_involution(trace, fwd_choices::ChoiceMap, fwd_ret::Tuple, proposal_args::Tuple)
+function subtree_involution_incremental(trace, fwd_choices::ChoiceMap, fwd_ret::Tuple, proposal_args::Tuple)
     (subtree_idx, subtree_depth, new_subtree_type) = fwd_ret
     model_args = get_args(trace)
 
@@ -227,7 +227,7 @@ function inference(xs::Vector{Float64}, ys::Vector{Float64}, num_iters::Int, cal
         #root = pick_random_node(covariance_fn, 1, max_branch)
 
         # do MH move on the subtree
-        (trace, _) = metropolis_hastings(trace, subtree_proposal, (), subtree_involution)
+        (trace, _) = metropolis_hastings(trace, subtree_proposal, (), subtree_involution_incremental)
 
         # do MH move on the top-level white noise
         (trace, _) = metropolis_hastings(trace, noise_proposal, ())
