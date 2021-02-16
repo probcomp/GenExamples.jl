@@ -132,7 +132,7 @@ end
     end
 end
 
-@transform subtree_involution (model_in, aux_in) to (model_out, aux_out) begin
+@transform subtree_involution_transform (model_in, aux_in) to (model_out, aux_out) begin
 
     (subtree_idx, subtree_depth, new_subtree_node) = @read(aux_in[], :discrete)
 
@@ -154,10 +154,10 @@ end
     @tcall(walk_new_subtree(subtree_idx))
 end
 
-is_involution!(subtree_involution)
+is_involution!(subtree_involution_transform)
 
 replace_subtree_move(trace) = metropolis_hastings(
-    trace, subtree_proposal, (), subtree_involution; check=true)[1]
+    trace, subtree_proposal, (), subtree_involution_transform; check=true)[1]
 
 
 #####################
