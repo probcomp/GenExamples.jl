@@ -19,4 +19,4 @@ for iter=1:1000
     init_parameter!((foo, :mu), value + step_size * gradient)
 end
 
-@assert abs(get_param(foo, :mu) - 3) < 1e-2
+@assert abs(get_parameter_value((foo, :mu)) - 3) < 1e-2
