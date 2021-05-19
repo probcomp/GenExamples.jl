@@ -16,7 +16,7 @@ for iter=1:1000
     accumulate_param_gradients!(trace, 0.)
     gradient = get_gradient((foo, :mu))
     value = get_parameter_value((foo, :mu))
-    init_parameter!((foo, :mu), vlaue + step_size * gradient)
+    init_parameter!((foo, :mu), value + step_size * gradient)
 end
 
 @assert abs(get_param(foo, :mu) - 3) < 1e-2
