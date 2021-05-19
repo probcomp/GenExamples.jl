@@ -3,10 +3,11 @@
 
 language: julia
 julia:
-  - 1.5
+  - 1.6
 
 # run these in parallel
 env:
+  - GEN_EXAMPLE=rws_mnist JULIA_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1
   - GEN_EXAMPLE=gp_structure GKS_ENCODING="utf8" GKSwstype="100"
   - GEN_EXAMPLE=regression
   - GEN_EXAMPLE=involutive_mcmc
