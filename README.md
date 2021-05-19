@@ -26,3 +26,5 @@ NOTE: These examples take substantially longer to run than Gen's unit tests.
 - Minimal example of maximum likelihood estimation: `mle/`
 
 - Reversible jump MCMC in change point model: `coal/`
+
+- Learning a deep generative model of binarized MNIST digits using [reweighted wake sleep](https://arxiv.org/abs/1406.2751): `rws_mnist/`
